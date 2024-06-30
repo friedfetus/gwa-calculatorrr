@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+.page {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* input */
+.input {
+    padding: 50px 0px;
+}
+.buttons {
+    padding-bottom: 50px;
+}
+.title-wrapper {
+    display: flex;
+    width: 100px;
+    justify-content: center;
+}
+.row-header-contents {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.input-row{
+    display: flex;
+    justify-content: center;
+
+}
+.input-row-contents {
+    padding: 4px 0px;
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.input-1 {
+    border-radius: 3px;
+    height: 30px;
+    width: 110px;
+}
+.input-2, .input-3 {
+    border-radius: 3px;
+    height: 30px;
+    width: 50px;
+}
+.remove-btn {
+    border: none;
+    color: white;
+    border-radius: 6px;
+    background-color: #FF4D4D;
+    height: 30px;
+    width: 30px;
+}
+
+
+
+
+.nav-bar {
+    display: flex;
+    background-color: #5995DA;
+    padding: 20px 0px;
+}
+.nav-contents {
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input,
+.buttons{
+    background-color: #EAEDF0;
+}
+
+/* buttons */
+#button-add,
+#button-reset {
+    border-radius: 4px;
+    color: white;
+    border: none;
+    background-color: gray;
+    padding: 10px;
+}
+#button-compute {
+    border-radius: 4px;
+    color: white;
+    border: none;
+    background-color: #F5CF8E;
+    padding: 10px;
+}
+#gwa {
+    border-radius: 4px;
+    border: none;
+    background-color: #F09A9D;
+    padding: 10px;
+}
+
+
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+.right-side {
+
+}
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 400px) {
+
+
+}
