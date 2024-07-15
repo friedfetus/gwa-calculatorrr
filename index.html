@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
     <title>eyoeyoeyo</title>
 </head>
 <body>
@@ -12,57 +15,70 @@
 
         <div class='section nav-bar'>
             <div class="nav-contents">
-                <div>GWA CALCULATOR</div>
-                <div>Image Placeholder</div>
             </div>
         </div>
         
-        <div class='section input'>
+        <div class="section input-filed">
+            <div class="input-field-contents">
+
+                <div class="column-container-1">
+                    <div class="column-title">Class Name (Optional)</div>
+                </div>
+
+                <div class="column-container-2">
+                    <div class="column-title">Number of Units</div>
+                </div>
+
+                <div class="column-container-3">
+                    <div class="column-title">Grades Obtained</div>
+                </div>
+
+                <div class="column-container-4">
+                    <div class="column-title"></div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="input-wrapper">
             
-            <form action="">
-
-                <div class="section row-header-wrapper">
-                    <div class="row-header-contents">
-                        <div class="title-wrapper">Class Name (optional)</div>
-                        <div class="title-wrapper">Number of Units</div>
-                        <div class="title-wrapper">Grades Obtained</div>
+            <div class="section input-box-field">
+                <div class="input-box-contents">
+                    
+                    <div class="class-name-container">
+                        <input class="text-field class-name" type="text">
+                    </div>
+                    
+                    <div class="number-of-units-conainter">
+                        <input class="text-field number-of-units" type="number">
+                    </div>
+                    
+                    <div class="grades-obtained-container">
+                        <input class="text-field grades-obtained" type="number">
+                    </div>
+                    
+                    <div class="column-container-4">
+                        <span class="material-symbols-outlined">
+                            delete
+                        </span>
                     </div>
                 </div>
+            </div>
+            
+        </div>
 
-                <div class="section input-row">
-                    <div class="input-row-contents">
-                        <div class="input-field subject-name">
-                            <input class="input-1" type="text">
-                        </div>
-                        <div class="input-field units-no">
-                            <input class="input-2" type="number">
-                        </div>
-                        <div class="input-field grades-obtained">
-                            <input class="input-3" type="number">
-                        </div>
-                        <div class="">
-                            <button class="remove-btn">X</button>
-                        </div>
-                    </div>
+        <!-- Buttons -->
+        <div class="section button">
+            <div class="button-contents">
+                <div class="left">
+                    <button id="add-btn">Add Subject</button>
                 </div>
 
-            </form>
-
-        </div>
-
-        <div class='section buttons'>
-            <div class="section left-side">
-                <button id="button-add">Add Subject</button>
-                <div id='no-of-units'>Total Number of Units: 0</div>
-                <div id="gwa">GWA: 0</div>
+                <div class="right">
+                    <button id="reset-btn">Reset Button</button>
+                    <button id="compute-btn">Compute</button>
+                </div>
             </div>
-            <div class="section right-side">
-                <button id="button-reset">Reset</button>
-                <button id="button-compute">Compute</button>
-            </div>
-        </div>
-        
-        <div class="footer">
 
         </div>
 
