@@ -110,20 +110,60 @@ input {
 
 
 /* Buttons */
+
+
 .button-contents {
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     display: flex;
-    /* flex-direction: column; */
-}
-.left {
-    width: 150px;
-    display: flex;
+    /* align-items: center; */
     flex-direction: column;
 }
-.right {
-    width: 150px;
+
+#add-btn {
+    font-size: 15px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #C8C6FA;
+    margin: 12px 0;
 }
+#reset-btn {
+
+    font-size: 15px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #C8C6FA;
+}
+#compute-btn {
+    font-size: 15px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #F5CF8E;
+}
+
+#html-units {
+    margin: 12px 0;
+    font-size: 18px;
+}
+#html-gwa {
+    display: flex;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+    padding: 13px;
+    background-color:#F09A9D;
+}
+.texts-content {
+    width: 90%;
+}
+.right {
+    
+}
+
 
 
 
