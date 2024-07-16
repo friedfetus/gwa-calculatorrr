@@ -199,10 +199,14 @@ input {
 .footer {
     position: fixed;
     background-color: #5995DA;
-    height: 20px;
     bottom: 0;
     width: 100%;
+    z-index: 0;
 }
+.footer-contents {
+    height: 20px;
+}
+
 
 
 
