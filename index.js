@@ -62,4 +62,26 @@ resetBtn.addEventListener("click", () => {
 const computeBtn = document.querySelector('#compute-btn')
 computeBtn.addEventListener("click", () => {
     
+    let totalNumberOfUnits = 0
+    let productTotal = 0
+    const numberOfUnits = document.querySelectorAll('.number-of-units')
+    const gradesObtained = document.querySelectorAll('.grades-obtained')
+
+    let productArray = []
+    let numberOfUnitsArray = Array.from(numberOfUnits)
+    let gradesObtainedArray = Array.from(gradesObtained)
+    
+    for(let i = 0; i < numberOfUnitsArray.length; i++) {
+        productArray[i] = numberOfUnitsArray[i].value * gradesObtainedArray[i].value  
+        productTotal += productArray[i]
+    }
+
+    numberOfUnits.forEach(unit => {
+        totalNumberOfUnits += Number(unit.value)
+    })
+    totalUnitHtml.innerHTML = `Total Number of Units: ${totalNumberOfUnits}`
+
+    let finalGWA = productTotal / totalNumberOfUnits
+
+    gpaHtml.innerHTML = `GWA: ${finalGWA.toFixed(4)}`
 })
