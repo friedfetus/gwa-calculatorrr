@@ -31,7 +31,7 @@ body {
 .nav-bar {
     display: flex;
     background-color: #5995DA;
-    padding: 35px 0px;
+    padding: 30px 0px;
 }
 .nav-contents {
     color: white;
@@ -197,9 +197,9 @@ input {
 
 /* footer */
 .footer {
-    position: absolute;
+    position: fixed;
     background-color: #5995DA;
-    height: 40px;
+    height: 20px;
     bottom: 0;
     width: 100%;
 }
