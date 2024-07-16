@@ -15,8 +15,8 @@ body {
 
 .wrapper {
     /* margin: auto; */
-    margin: 20px 10px;
-    padding: 20px 10;
+    margin: 30px 10px;
+    padding: 35px 0;
     background-color: white;
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -31,7 +31,7 @@ body {
 .nav-bar {
     display: flex;
     background-color: #5995DA;
-    padding: 25px 0px;
+    padding: 35px 0px;
 }
 .nav-contents {
     color: white;
@@ -195,6 +195,14 @@ input {
     
 }
 
+/* footer */
+.footer {
+    position: absolute;
+    background-color: #5995DA;
+    height: 40px;
+    bottom: 0;
+    width: 100%;
+}
 
 
 
