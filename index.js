@@ -1,29 +1,44 @@
 
-const btnAddSub = document.querySelector('.add-but')
+const btnAddSub = document.querySelector('#add-btn')
+const inputWrapper = document.querySelector('.input-wrapper')
 btnAddSub.addEventListener("click", addNewSub)
 function addNewSub() {
-    const newForm = document.createElement('form')
-    newForm.classList.add('input-row')
+    const newForm = document.createElement('div')
+    newForm.classList.add('section')
+    newForm.classList.add('input-box-field')
 
-    const newFields = `
-        <div class="input" >
-            <div class="input-container">
-                <input type="text" name="subject" class="fields text-field">
-                <input type="number" min="1" max="5" name="unit" class="fields unit-value num-field">
-                <input type="number" name="grade" class="fields grade-value num-field">
-                <button class="del-but">X</button>
+    newForm.innerHTML = `
+        <div class="input-box-contents">
+            <div class="class-name-container">
+                <input class="text-field class-name" type="text">
+            </div>
+
+            <div class="number-of-units-conainter">
+                <input class="text-field number-of-units" type="number">
+            </div>
+
+            <div class="grades-obtained-container">
+                <input class="text-field grades-obtained" type="number">
+            </div>
+
+            <div class="column-container-4">
+                <span class="material-symbols-outlined delete-but">
+                    delete
+                </span>
             </div>
         </div>
     `
-    newForm.innerHTML = newFields
-    document.querySelector('.input-row').appendChild(newForm)
+    console.log(newForm)
+    inputWrapper.appendChild(newForm)
 }
+
+
 
 document.addEventListener("click", removeSub)
 function removeSub( event ) {
-    if (event.target.classList.contains('del-but')) {
+    if (event.target.classList.contains('delete-but')) {
         // Get the parent form element and remove it
-        const formToRemove = event.target.closest('.input');
+        const formToRemove = event.target.closest('.input-box-field');
         if (formToRemove) {
             formToRemove.remove();
         }

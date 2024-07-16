@@ -13,6 +13,15 @@ body {
     flex-wrap: wrap;
 }
 
+.wrapper {
+    /* margin: auto; */
+    margin: 20px 10px;
+    padding: 20px 10;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 .section {
     width: 100%;
     display: flex;
@@ -32,6 +41,28 @@ body {
 }
 
 /* GWA calculator */
+.input-field-header-contents {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+.header-gwa{
+    font-size: 25px;
+}
+.img-class {
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+}
+.image1 {
+    width: 150px;
+}
+
+
+
 .column-container-1,
 .column-container-2,
 .column-container-3 {
@@ -55,7 +86,7 @@ body {
 .column-title {
     font-size: 20;
     font-weight: bold;
-    padding: 25px 0;
+    padding: 12px 0;
 }
 
 .text-field {
@@ -105,7 +136,7 @@ input {
 
 .number-of-units-conainter,
 .grades-obtained-container {
-    width: 50%;
+    width: 40%;
 }
 
 
@@ -153,7 +184,7 @@ input {
     justify-content: center;
     border: none;
     border-radius: 5px;
-    font-size: 25px;
+    font-size: 23px;
     padding: 13px;
     background-color:#F09A9D;
 }
