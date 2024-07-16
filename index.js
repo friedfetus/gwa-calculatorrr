@@ -1,4 +1,7 @@
 
+// Add
+const totalUnitHtml = document.querySelector('#html-units')
+const gpaHtml = document.querySelector('#html-gwa')
 const btnAddSub = document.querySelector('#add-btn')
 const inputWrapper = document.querySelector('.input-wrapper')
 btnAddSub.addEventListener("click", addNewSub)
@@ -32,66 +35,31 @@ function addNewSub() {
     inputWrapper.appendChild(newForm)
 }
 
-
-
-document.addEventListener("click", removeSub)
-function removeSub( event ) {
-    if (event.target.classList.contains('delete-but')) {
-        // Get the parent form element and remove it
-        const formToRemove = event.target.closest('.input-box-field');
+// remove
+document.addEventListener("click", (event) => {
+    if(event.target.classList.contains('delete-but')) {
+        const formToRemove = event.target.closest('.input-box-field')
         if (formToRemove) {
-            formToRemove.remove();
+            formToRemove.remove()
         }
-    }
-}
+    } 
+})
 
+// reset 
+const resetBtn = document.querySelector('#reset-btn')
+resetBtn.addEventListener("click", () => {
+    const textField = document.querySelectorAll('.text-field')
 
-const btnReset = document.querySelector('.reset-btn')
-btnReset.addEventListener("click", reset)
-function reset() {
-    const selectFields = document.querySelectorAll('.fields')
-
-    selectFields.forEach( fields => {
+    console.log(textField)
+    textField.forEach(fields => {
         fields.value = ''
-        gpa.innerHTML = `GWA : 0`
-        totalUnitHTML.innerHTML = `Total Number of Units: 0`
+        totalUnitHtml.innerHTML = 'Total Number of Units: 0'
+        gpaHtml.innerHTML = 'GWA: 0'
     });
-}
+})
 
-const btnCompute = document.querySelector('.compute-btn')
-btnCompute.addEventListener("click", compute)
-let gpa = document.getElementById('gwa-value')
-let totalUnitHTML = document.getElementById('units-total')
-function compute() {
-    const units = document.getElementsByClassName('unit-value')
-    const listOfUnits = []
-    let totalUnits = 0
-
-    for(let i = 0; i < units.length; i++) {
-        listOfUnits.push(parseFloat(units[i].value))
-    }
-
-    listOfUnits.forEach((e) => {
-        totalUnits += e
-    });
-
+// compute
+const computeBtn = document.querySelector('#compute-btn')
+computeBtn.addEventListener("click", () => {
     
-    totalUnitHTML.innerHTML = `Total Number of Units: ${totalUnits}`
-    
-
-    const grades = document.getElementsByClassName('grade-value')
-    const listOfGrades = []
-    let gradeTotal = 0
-    let finalGPA = 0
-
-    for(let i = 0; i < grades.length; i++) {
-        listOfGrades.push(parseFloat(grades[i].value))
-    }
-
-    for(let i = 0; i < grades.length; i++) {
-        gradeTotal += listOfUnits[i] * listOfGrades[i]  
-    }
-    
-    finalGPA = gradeTotal / totalUnits
-    gpa.innerHTML = `GWA : ${finalGPA.toPrecision(5)}`
-}
+})
