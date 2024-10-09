@@ -45,10 +45,9 @@ const resetBtn = document.querySelector('#reset-btn')
 resetBtn.addEventListener("click", () => {
     const textField = document.querySelectorAll('.text-field')
 
-    console.log(textField)
     textField.forEach(fields => {
         fields.value = ''
-        totalUnitHtml.innerHTML = 'Total Number of Units: 0'
+        totalUnitHtml.innerHTML = 'Total Units: 0'
         gpaHtml.innerHTML = 'GWA: 0'
     });
 })
@@ -74,7 +73,7 @@ computeBtn.addEventListener("click", () => {
     numberOfUnits.forEach(unit => {
         totalNumberOfUnits += Number(unit.value)
     })
-    totalUnitHtml.innerHTML = `Total Number of Units: ${totalNumberOfUnits}`
+    totalUnitHtml.innerHTML = `Total Units: ${totalNumberOfUnits}`
 
     let finalGWA = productTotal / totalNumberOfUnits
 
