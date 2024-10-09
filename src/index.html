@@ -14,40 +14,55 @@
     
     <title>Crazy GWA Calculator</title>
 </head>
-<body class="p-8 bg-white">
-    <div class='page'>
-
-        <div class='section nav-bar'>
-            <div class="nav-contents">
+    <body class="bg-slate-300 p-8">
+        <div class="container p-4 bg-white rounded-lg shadow-lg ">
+            <!-- header -->
+            <div class="p-3 bg-gray-200 rounded-md flex justify-center items-center">
+                <h1 class="text-xl font-bold">GWA CALCULATOR</h1>
             </div>
-        </div>
-
-        <div class="wrapper">
-            <div class="header">
-                <h2 class="text-base font-bold mb-3 border-b border-black">GWA CALCULATOR</h2>
-            </div>
-            
-            <div class="section input-filed">
-                <div class="input-field-contents">
+            <!-- end of header -->
+            <div class="section input-field">
+                <div class="input-field-contents grid grid-cols-3 grid-flow-col p-4 border-b">
                     <div class="column-container-1">
-                        <div class="column-title">Class Name (Optional)</div>
+                        <div class="font-bold">Class Name (Optional)</div>
                     </div>
                     <div class="column-container-2">
-                        <div class="column-title">Number of Units</div>
+                        <div class="font-bold">Number of Units</div>
                     </div>
                     <div class="column-container-3">
-                        <div class="column-title">Grades Obtained</div>
+                        <div class="font-bold">Grades Obtained</div>
                     </div>
                     <div class="column-container-4">
-                        <div class="column-title"></div>
+                        <div class="font-bold"></div>
                     </div>
                 </div>
             </div>
             
             <div class="input-wrapper">
+                <div class="section input-box-field">
+                    <div class="input-box-contents  grid grid-cols-3 grid-flow-col p-4 border-b">
+                        <div class="class-name-container">
+                            <input class="text-field class-name" type="text">
+                        </div>
+            
+                        <div class="number-of-units-conainter">
+                            <input class="text-field number-of-units" type="number">
+                        </div>
+            
+                        <div class="grades-obtained-container">
+                            <input class="text-field grades-obtained" type="number">
+                        </div>
+            
+                        <div class="column-container-4">
+                            <span class="material-symbols-outlined delete-but">
+                                delete
+                            </span>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="section input-box-field">
-                    <div class="input-box-contents">
+                    <div class="input-box-contents  grid grid-cols-3 grid-flow-col p-4 border-b">
             
                         <div class="class-name-container">
                             <input class="text-field class-name" type="text">
@@ -70,30 +85,7 @@
                 </div>
 
                 <div class="section input-box-field">
-                    <div class="input-box-contents">
-            
-                        <div class="class-name-container">
-                            <input class="text-field class-name" type="text">
-                        </div>
-            
-                        <div class="number-of-units-conainter">
-                            <input class="text-field number-of-units" type="number">
-                        </div>
-            
-                        <div class="grades-obtained-container">
-                            <input class="text-field grades-obtained" type="number">
-                        </div>
-            
-                        <div class="column-container-4">
-                            <span class="material-symbols-outlined delete-but">
-                                delete
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section input-box-field">
-                    <div class="input-box-contents">
+                    <div class="input-box-contents  grid grid-cols-3 grid-flow-col p-4 border-b">
             
                         <div class="class-name-container">
                             <input class="text-field class-name" type="text">
@@ -117,18 +109,14 @@
             </div>
             <!-- end of wrapper -->
             <!-- Buttons -->
-            <div class="section button">
-                <div class="button-contents">
-                    <div class="left">
+            <div class="section button mt-10">
+                <div class="button-contents grid grid-flow-col">
                         <button id="add-btn" class="bg-teal-400 p-2 text-white font-semibold
-                        rounded hover:bg-indigo-transition-colors">Add Subject</button>
-                    </div>
-                    <div class="right">
+                        rounded-md m-2">Add Subject</button>
                         <button id="reset-btn" class="bg-teal-400 p-2 text-white font-semibold
-                        rounded-md">Reset Button</button>
+                        rounded-md m-2">Reset Button</button>
                         <button id="compute-btn" class="bg-cyan-900 p-2 text-white font-semibold
-                        rounded-md">Compute!</button>
-                    </div>
+                        rounded-md m-2">Compute!</button>
                 </div>
             </div>
             
@@ -138,13 +126,8 @@
                     <button id="html-gwa">GWA: 0</button>
                 </div>
             </div>
-        </div>
-
-        <div class=" footer">
-            <div class="footer-contents">
-
-            </div>
-        </div>    
+        </div> <!--end of container-->
+   
     </div>
 </body>
-</htm
+</html>

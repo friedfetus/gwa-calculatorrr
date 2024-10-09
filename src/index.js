@@ -11,7 +11,7 @@ function addNewSub() {
     newForm.classList.add('input-box-field')
 
     newForm.innerHTML = `
-        <div class="input-box-contents">
+        <div class="input-box-contents grid grid-cols-3 grid-flow-col p-4 border-b">
             <div class="class-name-container">
                 <input class="text-field class-name" type="text">
             </div>
