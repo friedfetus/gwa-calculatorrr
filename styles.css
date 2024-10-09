@@ -1,3 +1,6 @@
+
+/* s 
+
 *{
     margin: 0;
     padding: 0;
@@ -14,12 +17,14 @@ body {
 }
 
 .wrapper {
-    /* margin: auto; */
+    
     margin: 30px 10px;
     padding: 35px 0;
     background-color: white;
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    align-items: center;
+    justify-content: center;
 }
 
 .section {
@@ -40,7 +45,7 @@ body {
     justify-content: space-between;
 }
 
-/* GWA calculator */
+ #GWA calculator
 .input-field-header-contents {
     width: 90%;
     display: flex;
@@ -66,7 +71,7 @@ body {
 .column-container-1,
 .column-container-2,
 .column-container-3 {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     width: 30%;
 }
 .column-container-4 {
@@ -82,7 +87,7 @@ body {
     margin-left: 40px;
 }
 
-/* input */
+ input
 .column-title {
     font-size: 20;
     font-weight: bold;
@@ -122,7 +127,7 @@ input {
     width: 100%;
 }
 .input-box-contents {
-    /* border: 1px red solid; */
+border: 1px red solid;
     gap: 10px;
     width: 90%;
     display: flex;
@@ -140,14 +145,14 @@ input {
 }
 
 
-/* Buttons */
+Buttons 
 
 
 .button-contents {
     justify-content: space-between;
     width: 90%;
     display: flex;
-    /* align-items: center; */
+ align-items: center; 
     flex-direction: column;
 }
 
@@ -191,11 +196,8 @@ input {
 .texts-content {
     width: 90%;
 }
-.right {
-    
-}
 
-/* footer */
+
 .footer {
     position: fixed;
     background-color: #5995DA;
@@ -211,9 +213,9 @@ input {
 
 
 
-/* Media Queries */
-
 @media only screen and (max-width: 400px) {
 
 
 }
+
+*/
