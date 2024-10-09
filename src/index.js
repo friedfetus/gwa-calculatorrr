@@ -11,23 +11,18 @@ function addNewSub() {
     newForm.classList.add('input-box-field')
 
     newForm.innerHTML = `
-        <div class="input-box-contents grid grid-cols-3 grid-flow-col p-4 border-b">
-            <div class="class-name-container">
-                <input class="text-field class-name" type="text">
+        <div class="input-box-contents grid grid-cols-3 grid-flow-col p-3 border-b">
+            <div class="class-name-container  ml-2 mr-2">
+                <input class="class-name w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" type="text">
             </div>
-
-            <div class="number-of-units-conainter">
-                <input class="text-field number-of-units" type="number">
+            <div class="number-of-units-conainter  ml-2 mr-2">
+                <input class="number-of-units w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" type="number">
             </div>
-
-            <div class="grades-obtained-container">
-                <input class="text-field grades-obtained" type="number">
+            <div class="grades-obtained-container  ml-2 mr-2">
+                <input class="grades-obtained w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" type="number">
             </div>
-
             <div class="column-container-4">
-                <span class="material-symbols-outlined delete-but">
-                    delete
-                </span>
+                <box-icon type='solid' class="delete-but mt-2.5" name='trash'></box-icon>
             </div>
         </div>
     `
