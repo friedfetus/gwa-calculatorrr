@@ -5,11 +5,12 @@ const gpaHtml = document.querySelector('#html-gwa')
 const btnAddSub = document.querySelector('#add-btn')
 const inputWrapper = document.querySelector('.input-wrapper')
 btnAddSub.addEventListener("click", addNewSub)
+
+
 function addNewSub() {
     const newForm = document.createElement('div')
     newForm.classList.add('section')
     newForm.classList.add('input-box-field')
-
     newForm.innerHTML = `
         <div class="input-box-contents grid grid-cols-3 grid-flow-col p-3 border-b">
             <div class="class-name-container  ml-2 mr-2">
@@ -26,11 +27,10 @@ function addNewSub() {
             </div>
         </div>
     `
-    console.log(newForm)
     inputWrapper.appendChild(newForm)
 }
 
-// remove
+// Remove an appended sub
 document.addEventListener("click", (event) => {
     if(event.target.classList.contains('delete-but')) {
         const formToRemove = event.target.closest('.input-box-field')
@@ -40,7 +40,7 @@ document.addEventListener("click", (event) => {
     } 
 })
 
-// reset 
+// Reset Forms & Computation
 const resetBtn = document.querySelector('#reset-btn')
 resetBtn.addEventListener("click", () => {
     const textField = document.querySelectorAll('.text-field')
@@ -52,7 +52,7 @@ resetBtn.addEventListener("click", () => {
     });
 })
 
-// compute
+// GWA Computation Logic
 const computeBtn = document.querySelector('#compute-btn')
 computeBtn.addEventListener("click", () => {
     

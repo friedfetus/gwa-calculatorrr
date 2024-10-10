@@ -1,22 +1,23 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- styles -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="output.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- javascript -->
-    <script defer src="js/index.js"></script>
-    <script defer src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    
-    <title>Crazy GWA Calculator</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <!-- style sheets-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+        <link rel="stylesheet" href="output.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- javascript -->
+        <script defer src="js/index.js"></script>
+        <script defer src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        
+        <title>Crazy GWA Calculator</title>
+    </head>
+    <!-- Beginning of HTML Body -->
     <body class="bg-pattern-circle bg-cover p-5 w-screen h-screen flex justify-center items-center">
+        <!-- Start of container -->
         <div class="container p-4 bg-white rounded-lg shadow-lg ">
             <!-- header -->
             <div class="p-4 bg-teal-900 rounded-md flex justify-between items-center space-x-4">
@@ -24,6 +25,8 @@
                 <img src="assets/image1.gif" class="rounded-lg w-35 h-10" loading="lazy" alt="Crazy Thinking">
             </div>
             <!-- end of header -->
+
+            <!-- Start of input fields -->
             <div class="section input-field">
                 <div class="input-field-contents grid grid-cols-3 grid-flow-col p-4 border-b">
                     <div class="column-container-1">
@@ -40,6 +43,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Section 1 end of input fields -->
             
             <div class="input-wrapper">
                 <div class="section input-box-field">
@@ -82,7 +86,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="section input-box-field">
                     <div class="input-box-contents  grid grid-cols-3 grid-flow-col p-3 border-b">
                         <div class="class-name-container  ml-2 mr-2">
@@ -98,10 +101,12 @@
                             <box-icon type='solid' class="delete-but mt-2.5" name='trash'></box-icon>
                         </div>
                     </div>
-                </div>    
+                </div>
+                <!-- End of input text fields  -->
             </div>
             <!-- end of wrapper -->
-            <!-- Buttons -->
+
+            <!-- Start of buttons section-->
             <div class="section button mt-10">
                 <div class="button-contents grid grid-flow-col">
                         <button id="add-btn" class="bg-teal-400 p-2 text-white font-semibold
@@ -112,13 +117,16 @@
                         rounded-md m-2 hover:bg-teal-800">COMPUTE!</button>
                 </div>
             </div>
+            <!-- End of button sections -->
             
+            <!-- Start of container footer -->
             <div class="section texts mt-5">
                 <div class="texts-content p-4 border-gray-600 border-t-2 flex justify-between items-center space-x-4">
                     <p id="html-units" class="text-lg font-bold text-black">Total Units: 0</p>
                     <p id="html-gwa" class="text-lg font-bold text-black">GWA: 0</p>
                 </div>
             </div>
+            <!-- footer end -->
         </div> <!--end of container-->
    
     </div>
