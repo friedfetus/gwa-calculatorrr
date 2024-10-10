@@ -1,2 +1,2 @@
-# mobile-first-practice
-just trying media queries 
+# AUTOMATED TRES - GWA CALCULATOR
+😈😈😈
