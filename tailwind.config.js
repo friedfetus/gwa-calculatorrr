@@ -1,9 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./index.html", "./**/*.{html,js}"], // Updated path for root directory
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'pattern-circle': "url('assets/bg-pat-circ.png')", // Custom background image
+      },
+    },
   },
   plugins: [],
-  purge: ['./src/**/*.html', './src/**/*.js'],
 }
