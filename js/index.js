@@ -1,4 +1,3 @@
-
 // Add
 const totalUnitHtml = document.querySelector('#html-units')
 const gpaHtml = document.querySelector('#html-gwa')
