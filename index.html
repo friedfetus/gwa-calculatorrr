@@ -12,13 +12,14 @@
         <!-- javascript -->
         <script defer src="js/index.js"></script>
         <script defer src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-        
+        <script defer type="module" src="js/animations.js"></script>
+
         <title>Crazy GWA Calculator</title>
     </head>
     <!-- Beginning of HTML Body -->
     <body class="bg-pattern-circle bg-cover p-5 w-screen h-screen flex justify-center items-center">
         <!-- Start of container -->
-        <div class="container p-4 bg-white rounded-lg shadow-lg ">
+        <div class="container p-4 bg-slate-200 rounded-lg shadow-lg ">
             <!-- header -->
             <div class="p-4 bg-teal-900 rounded-md flex justify-between items-center space-x-4">
                 <h1 class="text-xl font-bold text-white">GWA CALCULATOR</h1>
@@ -45,7 +46,7 @@
             </div>
             <!-- Section 1 end of input fields -->
             
-            <div class="input-wrapper">
+            <div class="input-wrapper" id="input-wrapper">
                 <div class="section input-box-field">
                     <div class="input-box-contents grid grid-cols-3 grid-flow-col p-3 border-b">
                         <div class="class-name-container ml-2 mr-2">
@@ -130,5 +131,9 @@
         </div> <!--end of container-->
    
     </div>
+    <!-- Animations  -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@formkit/auto-animate@1/dist/auto-animate.umd.js"></script> -->
+    
+
 </body>
 </html>
