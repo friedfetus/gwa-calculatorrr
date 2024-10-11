@@ -29,12 +29,12 @@ function addNewSub() {
                 <p class="class-name p-2 font-poppins font-medium truncate">${userInputValue}</p>
             </div>
             <div class="number-of-units-container ml-2 mr-2">
-                <input class="text-field grades-obtained w-full rounded-lg p-2 
+                <input class="number-of-units w-full rounded-lg p-2 
                             focus:outline-none focus:border-blue-500 border-4 border-black"
                              type="number">
             </div>
             <div class="grades-obtained-container ml-2 mr-2">
-                <input class="text-field grades-obtained w-full rounded-lg p-2 
+                <input class="grades-obtained w-full rounded-lg p-2 
                             focus:outline-none focus:border-blue-500 border-4 border-black"
                              type="number">
             </div>
@@ -48,6 +48,7 @@ function addNewSub() {
     userInput.value = ''; 
     btnAddSub.disabled = true;
 }
+
 
 
 // Remove an appended sub
@@ -73,29 +74,38 @@ resetBtn.addEventListener("click", () => {
 })
 
 // GWA Computation Logic
-const computeBtn = document.querySelector('#compute-btn')
+const computeBtn = document.querySelector('#compute-btn');
 computeBtn.addEventListener("click", () => {
-    
-    let totalNumberOfUnits = 0
-    let productTotal = 0
-    const numberOfUnits = document.querySelectorAll('.number-of-units')
-    const gradesObtained = document.querySelectorAll('.grades-obtained')
+    let totalNumberOfUnits = 0;
+    let productTotal = 0;
 
-    let productArray = []
-    let numberOfUnitsArray = Array.from(numberOfUnits)
-    let gradesObtainedArray = Array.from(gradesObtained)
-    
-    for(let i = 0; i < numberOfUnitsArray.length; i++) {
-        productArray[i] = numberOfUnitsArray[i].value * gradesObtainedArray[i].value  
-        productTotal += productArray[i]
+    // Select number of units and grades obtained using the correct class names
+    const numberOfUnits = document.querySelectorAll('.number-of-units');
+    const gradesObtained = document.querySelectorAll('.grades-obtained');
+
+    let productArray = [];
+    let numberOfUnitsArray = Array.from(numberOfUnits);
+    let gradesObtainedArray = Array.from(gradesObtained);
+
+    for (let i = 0; i < numberOfUnitsArray.length; i++) {
+        const unitsValue = Number(numberOfUnitsArray[i].value);
+        const gradesValue = Number(gradesObtainedArray[i].value);
+
+        // Only calculate if both values are present
+        if (unitsValue && gradesValue) {
+            productArray[i] = unitsValue * gradesValue;  
+            productTotal += productArray[i];
+        }
     }
 
     numberOfUnits.forEach(unit => {
-        totalNumberOfUnits += Number(unit.value)
-    })
-    totalUnitHtml.innerHTML = `Total Units: ${totalNumberOfUnits}`
+        totalNumberOfUnits += Number(unit.value);
+    });
 
-    let finalGWA = productTotal / totalNumberOfUnits
+    totalUnitHtml.innerHTML = `Total Units: ${totalNumberOfUnits}`;
 
-    gpaHtml.innerHTML = `GWA: ${finalGWA.toFixed(4)}`
-})
+    // Avoid division by zero
+    let finalGWA = totalNumberOfUnits ? (productTotal / totalNumberOfUnits) : 0;
+
+    gpaHtml.innerHTML = `GWA: ${finalGWA.toFixed(4)}`;
+});
