@@ -3,31 +3,52 @@ const totalUnitHtml = document.querySelector('#html-units')
 const gpaHtml = document.querySelector('#html-gwa')
 const btnAddSub = document.querySelector('#add-btn')
 const inputWrapper = document.querySelector('.input-wrapper')
+const userInput = document.getElementById('user-input')
 btnAddSub.addEventListener("click", addNewSub)
+btnAddSub.disabled = true;
+
+userInput.addEventListener('input', () => {
+    const userInputValue = userInput.value.trim();
+    if (userInputValue) {
+        btnAddSub.disabled = false;
+    } else {
+        btnAddSub.disabled = true;
+    }
+});
 
 
 function addNewSub() {
-    const newForm = document.createElement('div')
-    newForm.classList.add('section')
-    newForm.classList.add('input-box-field')
+    const userInputValue = userInput.value.trim();
+
+    const newForm = document.createElement('div');
+    newForm.classList.add('section');
+    newForm.classList.add('input-box-field');
     newForm.innerHTML = `
         <div class="input-box-contents grid grid-cols-3 grid-flow-col p-3 border-b">
-            <div class="class-name-container  ml-2 mr-2">
-                <input class="class-name w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" type="text">
+            <div class="class-name-container ml-2 mr-2">
+                <p class="class-name p-2 font-poppins font-medium truncate">${userInputValue}</p>
             </div>
-            <div class="number-of-units-conainter  ml-2 mr-2">
-                <input class="number-of-units w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" type="number">
+            <div class="number-of-units-container ml-2 mr-2">
+                <input class="text-field grades-obtained w-full rounded-lg p-2 
+                            focus:outline-none focus:border-blue-500 border-4 border-black"
+                             type="number">
             </div>
-            <div class="grades-obtained-container  ml-2 mr-2">
-                <input class="grades-obtained w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" type="number">
+            <div class="grades-obtained-container ml-2 mr-2">
+                <input class="text-field grades-obtained w-full rounded-lg p-2 
+                            focus:outline-none focus:border-blue-500 border-4 border-black"
+                             type="number">
             </div>
             <div class="column-container-4">
                 <box-icon type='solid' class="delete-but mt-2.5" name='trash'></box-icon>
             </div>
         </div>
-    `
-    inputWrapper.appendChild(newForm)
+    `;
+
+    inputWrapper.appendChild(newForm);
+    userInput.value = ''; 
+    btnAddSub.disabled = true;
 }
+
 
 // Remove an appended sub
 document.addEventListener("click", (event) => {

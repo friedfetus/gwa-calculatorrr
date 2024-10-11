@@ -7,6 +7,9 @@ module.exports = {
         'pattern-circle': "url('assets/bg-pat-circ.png')", // Custom background image
       },
     },
+    fontFamily: {
+        poppins: ['Poppins']
+    }
   },
   plugins: [],
 }
