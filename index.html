@@ -17,12 +17,12 @@
         <title>Crazy GWA Calculator</title>
     </head>
     <!-- Beginning of HTML Body -->
-    <body class="bg-pattern-circle bg-cover p-5 w-screen h-screen flex justify-center items-center">
+    <body class="bg-slate-200 bg-cover p-5 w-screen h-screen flex justify-center items-center">
         <!-- Start of container -->
-        <div class="container p-4 bg-slate-200 rounded-lg shadow-lg ">
+        <div class="container p-4 bg-slate-200 border-4 border-black rounded-lg shadow-2xl">
             <!-- header -->
-            <div class="p-4 bg-teal-900 rounded-md flex justify-between items-center space-x-4">
-                <h1 class="text-xl font-bold text-white">GWA CALCULATOR</h1>
+            <div class="p-4 bg-teal-600 border-4 border-black rounded-md flex justify-between items-center space-x-4">
+                <h1 class="text-xl font-bold text-white font-poppins tracking-wider">GWA CALCULATOR</h1>
                 <img src="assets/image1.gif" class="rounded-lg w-35 h-10" loading="lazy" alt="Crazy Thinking">
             </div>
             <!-- end of header -->
@@ -31,13 +31,13 @@
             <div class="section input-field">
                 <div class="input-field-contents grid grid-cols-3 grid-flow-col p-4 border-b">
                     <div class="column-container-1">
-                        <div class="font-bold">Class Name (Optional)</div>
+                        <div class="font-bold font-poppins">Class Code</div>
                     </div>
                     <div class="column-container-2">
-                        <div class="font-bold">Number of Units</div>
+                        <div class="font-bold font-poppins">Number of Units</div>
                     </div>
                     <div class="column-container-3">
-                        <div class="font-bold">Grades Obtained</div>
+                        <div class="font-bold font-poppins">Grades Obtained</div>
                     </div>
                     <div class="column-container-4">
                         <div class="font-bold"></div>
@@ -50,54 +50,21 @@
                 <div class="section input-box-field">
                     <div class="input-box-contents grid grid-cols-3 grid-flow-col p-3 border-b">
                         <div class="class-name-container ml-2 mr-2">
-                            <input class="text-field w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" type="text">
+                            <p class="class-name p-2 font-poppins font-medium truncate">CS101</p>
                         </div>
             
                         <div class="number-of-units-conainter  ml-2 mr-2">
-                            <input class="text-field number-of-units w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" type="number">
+                            <input class="text-field number-of-units w-full rounded-lg p-2 
+                            focus:outline-none focus:border-blue-500 border-4 border-black"
+                            type="number">
                         </div>
             
                         <div class="grades-obtained-container  ml-2 mr-2">
-                            <input class="text-field grades-obtained w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" type="number">
+                            <input class="text-field grades-obtained w-full rounded-lg p-2 
+                            focus:outline-none focus:border-blue-500 border-4 border-black"
+                             type="number">
                         </div>
             
-                        <div class="column-container-4">
-                            <box-icon type='solid' class="delete-but mt-2.5" name='trash'></box-icon>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section input-box-field">
-                    <div class="input-box-contents  grid grid-cols-3 grid-flow-col p-3 border-b">
-            
-                        <div class="class-name-container  ml-2 mr-2">
-                            <input class="text-field class-name w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" type="text">
-                        </div>
-            
-                        <div class="number-of-units-conainter  ml-2 mr-2">
-                            <input class="text-field number-of-units w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" type="number">
-                        </div>
-            
-                        <div class="grades-obtained-container  ml-2 mr-2">
-                            <input class="text-field grades-obtained w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" type="number">
-                        </div>
-            
-                        <div class="column-container-4">
-                            <box-icon type='solid' class="delete-but mt-2.5" name='trash'></box-icon>
-                        </div>
-                    </div>
-                </div>
-                <div class="section input-box-field">
-                    <div class="input-box-contents  grid grid-cols-3 grid-flow-col p-3 border-b">
-                        <div class="class-name-container  ml-2 mr-2">
-                            <input class="text-field class-name w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" type="text">
-                        </div>
-                        <div class="number-of-units-conainter  ml-2 mr-2">
-                            <input class="text-field number-of-units w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" type="number">
-                        </div>
-                        <div class="grades-obtained-container  ml-2 mr-2">
-                            <input class="text-field grades-obtained w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" type="number">
-                        </div>
                         <div class="column-container-4">
                             <box-icon type='solid' class="delete-but mt-2.5" name='trash'></box-icon>
                         </div>
@@ -108,23 +75,35 @@
             <!-- end of wrapper -->
 
             <!-- Start of buttons section-->
-            <div class="section button mt-10">
+            <div class="section button mt-5 p-2">
                 <div class="button-contents grid grid-flow-col">
-                        <button id="add-btn" class="bg-teal-400 p-2 text-white font-semibold
-                        rounded-md m-2 hover:bg-teal-600">ADD SUBJECT</button>
-                        <button id="reset-btn" class="bg-red-400 p-2 text-white font-semibold
-                        rounded-md m-2 hover:bg-red-600">RESET</button>
-                        <button id="compute-btn" class="bg-teal-600 p-2 text-white font-semibold
-                        rounded-md m-2 hover:bg-teal-800">COMPUTE!</button>
+                    <div class="cell-case p-2">
+                       <input class="text-field border-4 border-black rounded-lg bg-white
+                         p-2 w-full font-poppins " type="text" id="user-input" placeholder="Enter Class Code"> 
+                    </div>
+                    
+                        <button id="add-btn" class="bg-teal-600 p-2 text-white font-semibold
+                         rounded-md m-2 hover:bg-teal-800 hover:scale-95 font-poppins disabled:cursor-not-allowed
+                          disabled:hover:bg-gray-600 duration-200 border-4 border-black">ADD SUBJECT</button>  
+
+                    
                 </div>
+                <div class="button-contents grid grid-flow-col mt-6">
+                        <button id="reset-btn" class="bg-red-600 p-2 text-white font-semibold
+                        rounded-md m-2 hover:bg-red-800 hover:scale-95 duration-200 font-poppins border-4 border-black">RESET</button>
+                        <button id="compute-btn" class="bg-teal-600 p-2 text-white font-semibold
+                        rounded-md m-2 hover:bg-teal-800 hover:scale-95 duration-200 font-poppins border-4 border-black">COMPUTE!</button>
+                </div>
+                
+                
             </div>
             <!-- End of button sections -->
             
             <!-- Start of container footer -->
             <div class="section texts mt-5">
                 <div class="texts-content p-4 border-gray-600 border-t-2 flex justify-between items-center space-x-4">
-                    <p id="html-units" class="text-lg font-bold text-black">Total Units: 0</p>
-                    <p id="html-gwa" class="text-lg font-bold text-black">GWA: 0</p>
+                    <p id="html-units" class="text-lg font-bold text-black font-poppins">Total Units: 0</p>
+                    <p id="html-gwa" class="text-lg font-bold text-black font-poppins">GWA: 0</p>
                 </div>
             </div>
             <!-- footer end -->
@@ -132,7 +111,6 @@
    
     </div>
     <!-- Animations  -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@formkit/auto-animate@1/dist/auto-animate.umd.js"></script> -->
     
 
 </body>
