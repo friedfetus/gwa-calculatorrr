@@ -24,19 +24,21 @@ function addNewSub() {
     newForm.classList.add('section');
     newForm.classList.add('input-box-field');
     newForm.innerHTML = `
-        <div class="input-box-contents grid grid-cols-3 grid-flow-col p-3 border-b">
+        <div class="input-box-contents grid grid-cols-3 grid-flow-col p-3">
             <div class="class-name-container ml-2 mr-2">
                 <p class="class-name p-2 font-poppins font-medium truncate">${userInputValue}</p>
             </div>
             <div class="number-of-units-container ml-2 mr-2">
                 <input class="number-of-units w-full rounded-lg p-2 
-                            focus:outline-none focus:border-blue-500 border-4 border-black"
-                             type="number">
+                            focus:outline-none focus:border-blue-500 
+                            border-b-4 border-r-4 border-t-2 border-l-2 border-black font-bold"
+                             type="number" placeholder="${Math.floor(Math.random() * 5) + 1}">
             </div>
             <div class="grades-obtained-container ml-2 mr-2">
                 <input class="grades-obtained w-full rounded-lg p-2 
-                            focus:outline-none focus:border-blue-500 border-4 border-black"
-                             type="number">
+                            focus:outline-none focus:border-blue-500 
+                            border-b-4 border-r-4 border-t-2 border-l-2 border-black font-bold"
+                             type="number" placeholder="3.00">
             </div>
             <div class="column-container-4">
                 <box-icon type='solid' class="delete-but mt-2.5" name='trash'></box-icon>
@@ -61,17 +63,6 @@ document.addEventListener("click", (event) => {
     } 
 })
 
-// Reset Forms & Computation
-const resetBtn = document.querySelector('#reset-btn')
-resetBtn.addEventListener("click", () => {
-    const textField = document.querySelectorAll('.text-field')
-
-    textField.forEach(fields => {
-        fields.value = ''
-        totalUnitHtml.innerHTML = 'Total Units: 0'
-        gpaHtml.innerHTML = 'GWA: 0'
-    });
-})
 
 // GWA Computation Logic
 const computeBtn = document.querySelector('#compute-btn');
@@ -79,7 +70,6 @@ computeBtn.addEventListener("click", () => {
     let totalNumberOfUnits = 0;
     let productTotal = 0;
 
-    // Select number of units and grades obtained using the correct class names
     const numberOfUnits = document.querySelectorAll('.number-of-units');
     const gradesObtained = document.querySelectorAll('.grades-obtained');
 
@@ -104,8 +94,26 @@ computeBtn.addEventListener("click", () => {
 
     totalUnitHtml.innerHTML = `Total Units: ${totalNumberOfUnits}`;
 
-    // Avoid division by zero
+    // prevent NaN HAHAHAHA
     let finalGWA = totalNumberOfUnits ? (productTotal / totalNumberOfUnits) : 0;
 
     gpaHtml.innerHTML = `GWA: ${finalGWA.toFixed(4)}`;
+});
+
+// Reset Forms & Computation
+const resetBtn = document.querySelector('#reset-btn')
+resetBtn.addEventListener("click", () => {
+    const numberOfUnitsFields = document.querySelectorAll('.number-of-units');
+    const gradesObtainedFields = document.querySelectorAll('.grades-obtained');
+
+    numberOfUnitsFields.forEach(field => {
+        field.value = '';  
+    });
+
+    gradesObtainedFields.forEach(field => {
+        field.value = '';  
+    });
+
+    totalUnitHtml.innerHTML = 'Total Units: 0';
+    gpaHtml.innerHTML = 'GWA: 0';
 });
